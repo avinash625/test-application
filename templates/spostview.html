@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post Details</title>
+</head>
+<body>
+<h1 style="text-align: center">Post Details</h1>
+<table border="collapsed" style="text-align: center" width="100%">
+    <tr>
+        <td>Created on</td>
+        <td>Description</td>
+        <td>available</td>
+        <td>User</td>
+    </tr>
+    {% for p in post %}
+    <tr>
+        <td>{{ p.post_created }}</td>
+        <td>{{ p.post_description }}</td>
+        <td>{{ p.is_sold }}</td>
+        <td>{{ p.post_user }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

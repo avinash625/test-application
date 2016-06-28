@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Avilable posts</title>
+</head>
+<body>
+<h1 style="text-align: center">The list of all the posts present
+</h1>
+<table border = "collapsed" width = '100%' style="text-align: center">
+    <tr>
+        <td>Item</td>
+        <td>Post Created</td>
+        <td>Description</td>
+        <td>Available</td>
+        <td>User</td>
+    </tr>
+    {% for post in posts %}
+    <tr>
+        <td> <a href="/olx/post/{{ post.id }}" > <img alt="image" width="100" height="90" src="https://heidicvlach.files.wordpress.com/2012/11/notfound.png"></a></td>
+        <td>{{ post.post_created }}</td>
+        <td>{{ post.post_description }}</td>
+        <td>{{ post.is_sold }}</td>
+        <td>{{ post.post_user }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
